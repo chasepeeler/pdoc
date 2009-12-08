@@ -35,7 +35,15 @@ grammar Basic
     ![\n] . <Char>
   end
   
-  rule space
+  rule single_space
     " " <Space>
+  end
+
+  rule tab
+   [\t]
+  end
+
+  rule space
+   tab / single_space
   end
 end
